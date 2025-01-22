@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="موقع مستشفى">
+    <title>مستشفى الحياة</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* styles.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #009688;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header .logo h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.about, .services, .contact {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-bottom: 10px;
+    color: #009688;
+}
+
+.services ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.services ul li {
+    margin-bottom: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 5px;
+}
+
+form input, form textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #009688;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #00796b;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #009688;
+    color: white;
+}
+
+    </style>
+</head>
+<body>
+    <!-- الشعار والقائمة -->
+    <header>
+        <div class="logo">
+            <h1>مستشفى الحياة</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about">عن المستشفى</a></li>
+                <li><a href="#services">الخدمات</a></li>
+                <li><a href="#contact">اتصل بنا</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- قسم عن المستشفى -->
+    <section id="about" class="about">
+        <h2>عن مستشفى الحياة</h2>
+        <p>مستشفى الحياة يقدم أفضل الخدمات الطبية المتخصصة في مختلف التخصصات...</p>
+    </section>
+
+    <!-- قسم الخدمات -->
+    <section id="services" class="services">
+        <h2>خدماتنا</h2>
+        <ul>
+            <li>الطب العام</li>
+            <li>الجراحة</li>
+            <li>الأطفال</li>
+            <li>العيادات الخاصة</li>
+        </ul>
+    </section>
+
+    <!-- قسم الاتصال -->
+    <section id="contact" class="contact">
+        <h2>اتصل بنا</h2>
+        <form action="#">
+            <label for="name">الاسم:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">البريد الإلكتروني:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">الرسالة:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">إرسال</button>
+        </form>
+    </section>
+
+    <!-- تذييل الموقع -->
+    <footer>
+        <p>&copy; 2024 مستشفى الحياة. جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <script >
+        // script.js
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // التحقق من صحة الحقول
+            const name = document.querySelector('#name').value;
+            const email = document.querySelector('#email').value;
+            const message = document.querySelector('#message').value;
+
+            if (name === '' || email === '' || message === '') {
+                alert('يرجى ملء جميع الحقول.');
+                return;
+            }
+
+            alert('تم إرسال الرسالة بنجاح!');
+        });
+
+    </script>
+</body>
+</html>
